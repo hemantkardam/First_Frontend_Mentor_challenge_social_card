@@ -36,11 +36,11 @@
   <body>
     <div class="container">
       <div class="img">
-        <img src="./assets/images/avatar-jessica.jpeg" alt="image of avatar" />
+        <img id="img" src="./Profile_Photo.jpg" alt="image of avatar" />
       </div>
-      <h1>Jessica Randall</h1>
-      <h3 id="address">London, United Kingdom</h3>
-      <p>"Front-end developer and avid reader."</p>
+      <h1>Hemant Kardam</h1>
+      <h3 id="address">Karawal Nagar, Delhi, India</h3>
+      <p>"Front-end developer | Building cool web stuff 🚀"</p>
       <div class="box">
         <a href="https://github.com/hemantkardam">GitHub</a>
       </div>
@@ -68,6 +68,22 @@
           >Frontend Mentor</a
         >. Coded by <a href="#">Hemant Kardam</a>.
       </div>
+      <div id="popup" class="image_popup active">
+        <img src="./Profile_Photo.jpg" alt="" />
+      </div>
     </div>
+
+    <script>
+      // const body = document.getElementsByTagName("body");
+      const img = document.getElementById("img");
+      const popup = document.getElementById("popup");
+      img.addEventListener("click", (e) => {
+        e.stopPropagation(); // taaki document click turant trigger na ho
+        popup.classList.remove("active");
+      });
+      document.addEventListener("click", () => {
+        popup.classList.add("active");
+      });
+    </script>
   </body>
 </html>

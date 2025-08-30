@@ -39,8 +39,9 @@ p{
 }
 img{
     border-radius:100% ;
-    height: 100px;
     width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 .img{
     max-width: 400px;
@@ -67,4 +68,15 @@ a:active{
     background-color: #c4f82a;
     cursor: pointer;
     color: black;
+}
+.image_popup img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.active{
+    display: none;
 }
