@@ -80,9 +80,11 @@
       img.addEventListener("click", (e) => {
         e.stopPropagation(); // taaki document click turant trigger na ho
         popup.classList.remove("active");
+        img.classList.add("active");
       });
       document.addEventListener("click", () => {
         popup.classList.add("active");
+        img.classList.remove("active");
       });
     </script>
   </body>
